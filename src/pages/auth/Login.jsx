@@ -3,6 +3,7 @@ import './auth.css'
 import {Link, useNavigate} from 'react-router-dom'
 import { UserData } from '../../context/UserContext.jsx'
 import { CourseData } from '../../context/courseContext.jsx'
+import { server } from '../../main.jsx'
 
 const Login = () => {
   const navigate=useNavigate()
@@ -49,7 +50,7 @@ const Login = () => {
   type="button"
   className="google-btn"
   onClick={() => {
-    window.location.href = "http://localhost:8080/auth/google";
+    window.location.href = `${server}/auth/google`;
   }}
 >
   <img

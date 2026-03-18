@@ -1,6 +1,7 @@
 import { useState,useEffect } from 'react'
 import './Bot.css'
 import {io} from "socket.io-client";
+import { server } from '../../main.jsx'
 
 function Bot() {
   const [socket,setSocket]=useState()
@@ -38,7 +39,7 @@ function Bot() {
     }
   }
   useEffect(()=>{
-    let socketInstance=io("http://localhost:8080");
+    const socketInstance = io(server);
     setSocket(socketInstance);
     socketInstance.on("ai-message-response",(response)=>{
       const botMessage={
