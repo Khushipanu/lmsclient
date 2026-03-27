@@ -14,10 +14,8 @@ const Register = () => {
 
 
   const submitHandler=async(e)=>{
- 
     e.preventDefault()
-    await registerUser(name,email,password,role,navigate)
-
+    await registerUser(name,email,password,role,navigate);
   }
 
 
@@ -59,10 +57,10 @@ const Register = () => {
 
                 </button>
             </form>
-            <p>Have an account? <Link to='/login'> Login  </Link>   </p>
+            <p>Have an account? <Link to='/login'> Login </Link> </p>
         </div>
     </div>
   )
 }
 
-export default Register
+export default Register;
