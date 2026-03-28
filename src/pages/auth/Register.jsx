@@ -81,7 +81,7 @@ const Register = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault()
-    await registerUser(name, email, password, role, navigate)
+    await registerUser(name, email, password, role, navigate);
   }
 
   return (
